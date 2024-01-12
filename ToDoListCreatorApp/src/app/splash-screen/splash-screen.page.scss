@@ -1,0 +1,40 @@
+ion-content {
+  --background: url("../../assets/img/todotaustakuva.jpg") no-repeat
+    center/cover;
+}
+#splash {
+  margin-top: 300px;
+  font-size: 70px;
+  font-family: pacifico;
+}
+.text-blur-out {
+  -webkit-animation: text-blur-out 4.2s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  animation: text-blur-out 4.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+/**
+   * ----------------------------------------
+   * animation text-blur-out
+   * ----------------------------------------
+   */
+@-webkit-keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
+}
+@keyframes text-blur-out {
+  0% {
+    -webkit-filter: blur(0.01);
+    filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(12px) opacity(0%);
+    filter: blur(12px) opacity(0%);
+  }
+}
