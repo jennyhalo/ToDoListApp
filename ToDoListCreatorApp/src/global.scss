@@ -33,3 +33,11 @@ ion-title {
 p {
     font-family: Quicksand;
 }
+
+ion-content {
+    --background: none;
+    background-image: url('./assets/img/todotaustakuva.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
