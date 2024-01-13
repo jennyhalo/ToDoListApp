@@ -26,11 +26,13 @@
 @import "@ionic/angular/css/flex-utils.css";
 @import "./theme/fonts.scss";
 
-ion-title {
+h1 {
     font-family: Pacifico;
+    color: #222222;
+    opacity: .85;
 }
 
-p {
+* {
     font-family: Quicksand;
 }
 
