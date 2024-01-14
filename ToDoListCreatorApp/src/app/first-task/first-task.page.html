@@ -1,13 +1,13 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>first-task</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">first-task</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container">
+    <ion-icon name="checkmark-circle-outline"></ion-icon>
+    <h1>Let's get started</h1>
+    <p>Create your first To-Do List</p>
+    <ion-button 
+        [routerLink]="['/to-do-list']" 
+        color="secondary" 
+        expand="block">
+        New List
+    </ion-button> 
+  </div>
 </ion-content>
