@@ -1,15 +1,20 @@
 <ion-content [fullscreen]="true">
-  <h1>My Profile</h1>
-  <div class="profile ion-margin">
-    <ion-avatar><img alt="Silhouette of a person's head"
-        src="https://ionicframework.com/docs/img/demos/avatar.svg" /></ion-avatar>
-    <p>Username</p>
-    <p>Motivotional quote here</p>
-    <div class="taskCount">
-    <ion-icon name="trophy-outline"></ion-icon>
-    <h1>39</h1>
-    <p>Tasks completed</p>
+  <div class=" header ion-margin">
+    <div class="headerLeft"><ion-icon slot="start" class="arrow" name="chevron-back-outline"></ion-icon></div>
+    <div class="headerCenter">
+      <h1 class="title">My Profile</h1>
+    </div>
+    <div class="headerRight"></div>
   </div>
+  <div class="profile ion-margin">
+    <ion-avatar> <img alt="Silhouette of a person's head" src="../../assets/img/Avatar2.png" /></ion-avatar>
+    <p class="username">Username</p>
+    <p class="quote ion-padding">"Good things happen to those who hustle"</p>
+    <div class="taskCount">
+      <ion-icon class="trophy" name="trophy-outline"></ion-icon>
+      <h1>39</h1>
+      <p>Tasks completed</p>
+    </div>
     <p>Give feedback for To-Do List Creator <a [routerLink]="['/feedback']">here!</a></p>
     <ion-button expand="block">Logout</ion-button>
   </div>

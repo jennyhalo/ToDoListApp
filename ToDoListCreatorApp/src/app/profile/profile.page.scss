@@ -10,6 +10,23 @@
   border-bottom: 1px solid #222222;
   margin: 10px 10px;
 }
+.header {
+  display: flex;
+}
+.username {
+  font-size: 20px;
+}
+.quote {
+  font-style: italic;
+  font-weight: 500;
+}
+.headerLeft,
+.headerRight {
+  flex: 1;
+}
+.headerLeft {
+  position: relative;
+}
 ion-button {
   margin: 20px;
 }
@@ -18,10 +35,19 @@ p {
 }
 h1 {
   text-align: center;
-  margin: 5px;
+}
+.title {
+  margin-top: 70px;
+}
+.arrow {
+  position: absolute;
+  bottom: 7px;
+  left: 0px;
 }
 ion-icon {
   font-size: 32px;
+}
+.trophy {
   display: block;
   margin: auto;
   padding-top: 1rem;
