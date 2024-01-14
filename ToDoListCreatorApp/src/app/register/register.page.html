@@ -1,13 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="xc fullheight">
+    <div class="content">
+      <h1>To-Do List Creator</h1>
+    </div>
+    <form class="ion-margin">
+      <div>
+        <h2>Create account</h2>
+        <ion-item>
+          <ion-input 
+            label="Email" 
+            label-placement="floating">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input 
+            label="Username" 
+            label-placement="floating">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input 
+            label="Password" 
+            label-placement="floating">
+          </ion-input>
+        </ion-item>
+      </div>
+      <div>
+        <ion-button expand="block">Create</ion-button> 
+      </div>
+      <div>
+        <p [routerLink]="['/login']" >I have an account</p>
+      </div>
+    </form>
+  </div>
 </ion-content>
