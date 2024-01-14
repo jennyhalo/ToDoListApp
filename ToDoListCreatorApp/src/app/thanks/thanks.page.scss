@@ -1,5 +1,8 @@
+.container {
+  margin-top: 200px;
+}
+
 #splash {
-  margin-top: 300px;
   margin-bottom: 15px;
   font-size: 65px;
   font-family: pacifico;
@@ -7,14 +10,25 @@
 #header {
   position: relative;
 }
+
+h1 {
+  margin-top: 0%;
+}
+
 ion-avatar {
   position: absolute;
   right: 15px;
   top: 15px;
 }
-ion-icon {
+
+.heart{
   font-size: 128px;
 }
+
+.chevron{
+  font-size: 20px;
+}
+
 ion-button {
-    margin: 10px 50px;
+    margin: 30px 50px;
 }
