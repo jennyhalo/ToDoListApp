@@ -1,13 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>profile</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1>My Profile</h1>
+  <div class="profile ion-margin">
+    <ion-avatar><img alt="Silhouette of a person's head"
+        src="https://ionicframework.com/docs/img/demos/avatar.svg" /></ion-avatar>
+    <p>Username</p>
+    <p>Motivotional quote here</p>
+    <div class="taskCount">
+    <ion-icon name="trophy-outline"></ion-icon>
+    <h1>39</h1>
+    <p>Tasks completed</p>
+  </div>
+    <p>Give feedback for To-Do List Creator <a [routerLink]="['/feedback']">here!</a></p>
+    <ion-button expand="block">Logout</ion-button>
+  </div>
 </ion-content>
