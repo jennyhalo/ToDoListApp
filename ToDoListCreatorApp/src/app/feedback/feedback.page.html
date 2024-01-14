@@ -7,6 +7,23 @@
       />
     </ion-avatar>
     <h1>Give us Feedback</h1>
-    <p>Your feedback is important for us, thank you for helping us improve our app!</p>
+    <div class="feedback">
+      <p>Your feedback is important for us, thank you for helping us improve our app!</p>
+    </div>
+    <ion-item>
+      <ion-textarea
+        placeholder="Type here"
+        [autoGrow]="true"
+        rows="5" 
+        cols="33"
+      >
+      </ion-textarea>
+    </ion-item>
+    <ion-button 
+      [routerLink]="['/thanks']" 
+      color="secondary" 
+      expand="block">
+      Submit
+  </ion-button> 
   </div>
 </ion-content>
