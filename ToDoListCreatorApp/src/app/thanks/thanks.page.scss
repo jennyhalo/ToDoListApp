@@ -1,20 +1,21 @@
 #splash {
-    margin-top: 300px;
-    margin-bottom: 15px;
-    font-size: 65px;
-    font-family: pacifico;
-  }
-ion-icon {
-    font-size: 128px;
-    color: #222222;
+  margin-top: 300px;
+  margin-bottom: 15px;
+  font-size: 65px;
+  font-family: pacifico;
 }
-
-button {
-    padding: 17px;
-    border-radius: 19px;
-    font-size: 20px;
-    font-weight: 500;
-    color: #222222;
-    background-color: #9B73E0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+#header {
+  position: relative;
+}
+ion-avatar {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+ion-icon {
+  font-size: 128px;
+  color: #222222;
+}
+ion-button {
+    margin: 10px 50px;
 }
