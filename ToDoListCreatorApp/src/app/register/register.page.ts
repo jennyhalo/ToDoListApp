@@ -9,8 +9,12 @@ import { LoadingController } from '@ionic/angular';
   styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage implements OnInit {
-  regForm: FormGroup | undefined;
-  constructor(public formBuilder:FormBuilder, public loadingCtrl:LoadingController, public authService:AuthenticationService) {}
+  regForm: FormGroup;
+  constructor(
+    public formBuilder: FormBuilder,
+    public loadingCtrl: LoadingController,
+    public authService: AuthenticationService
+  ) {}
 
   ngOnInit() {
     this.regForm = this.formBuilder.group({
@@ -25,19 +29,21 @@ export class RegisterPage implements OnInit {
       ],
       password: [
         '',
-        Validators.required,
-        Validators.pattern('(?=.*d)(?=.*[a-z])(?=.*[A-Z]).{8,}'),
+        [
+          Validators.required,
+          Validators.pattern('(?=.*d)(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z]).{8,}'),
+        ],
       ],
     });
   }
-  get errorControl(){
+  get errorControl() {
     return this.regForm?.controls;
   }
 
-  async register(){
+  async register() {
     const loading = await this.loadingCtrl.create();
     await loading.present();
-    if(this.regForm?.valid){
+    if (this.regForm?.valid) {
       // const user = await this.authService.registerUser(email, password)
     }
   }

@@ -3,33 +3,54 @@
     <div class="content">
       <h1>To-Do List Creator</h1>
     </div>
-    <form class="ion-margin">
+    <form [formGroup]="regForm" novalidate class="ion-margin">
       <div>
         <h2>Create account</h2>
+
         <ion-item>
-          <ion-input 
-            label="Email" 
-            label-placement="floating">
+          <ion-input formControlName="email" label="Email" label-placement="floating">
           </ion-input>
         </ion-item>
+        <!-- Controls for email  -->
+        <div *ngIf="this.regForm.controls?.['email'].touched && this.regForm.controls?.['email'].invalid">
+          <ion-text *ngIf="errorControl.email.errors?.required">
+            Email is required
+          </ion-text>
+          <ion-text *ngIf="errorControl.email.errors?.pattern">
+            Email should be valid
+          </ion-text>
+        </div>
+
         <ion-item>
-          <ion-input 
-            label="Username" 
-            label-placement="floating">
+          <ion-input formControlName="username" label="Username" label-placement="floating">
           </ion-input>
         </ion-item>
+        <!-- Controls for username  -->
+        <div *ngIf="this.regForm.controls?.['username'].touched && this.regForm.controls?.['username'].invalid">
+          <ion-text *ngIf="errorControl.username.errors?.required">
+            Username is required
+          </ion-text>
+        </div>
         <ion-item>
-          <ion-input 
-            label="Password" 
-            label-placement="floating">
+          <ion-input formControlName="password" label="Password" label-placement="floating">
           </ion-input>
         </ion-item>
+        <!-- Controls for password  -->
+        <div *ngIf="this.regForm.controls?.['password'].touched && this.regForm.controls?.['password'].invalid">
+          <ion-text *ngIf="errorControl.password.errors?.required">
+            Password is required
+          </ion-text>
+          <ion-text *ngIf="errorControl.password.errors?.pattern">
+            Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more
+            characters
+          </ion-text>
+        </div>
       </div>
       <div>
-        <ion-button expand="block">Create</ion-button> 
+        <ion-button expand="block">Create</ion-button>
       </div>
       <div>
-        <p [routerLink]="['/login']" >I have an account</p>
+        <p [routerLink]="['/login']">I have an account</p>
       </div>
     </form>
   </div>
