@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from '../authentication.service';
 import { LoadingController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +14,8 @@ export class RegisterPage implements OnInit {
   constructor(
     public formBuilder: FormBuilder,
     public loadingCtrl: LoadingController,
-    public authService: AuthenticationService
+    public authService: AuthenticationService,
+    public router: Router
   ) {}
 
   ngOnInit() {
@@ -44,7 +46,18 @@ export class RegisterPage implements OnInit {
     const loading = await this.loadingCtrl.create();
     await loading.present();
     if (this.regForm?.valid) {
-      // const user = await this.authService.registerUser(email, password)
+      const user = await this.authService
+        .registerUser(this.regForm.value.email, this.regForm.value.password)
+        .catch((error) => {
+          console.log(error);
+          loading.dismiss();
+        });
+      if (user) {
+        loading.dismiss();
+        this.router.navigate(['/login']);
+      } else {
+        console.log('provide correct values');
+      }
     }
   }
 }
