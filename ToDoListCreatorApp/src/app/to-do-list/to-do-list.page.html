@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
   <div class="container">
     <div class="top-nav">
-      <ion-icon name="chevron-back-outline"></ion-icon>
+      <ion-icon class="chevron" name="chevron-back-outline"></ion-icon>
       <ion-avatar [routerLink]="['/profile']">
         <img 
           alt="Silhouette of a person's head"
@@ -11,7 +11,7 @@
     </div>
     <div>
       <h1>List Name</h1>
-      <ion-item>
+      <ion-item class="todo-input">
         <ion-input placeholder="There’s so many things to do...." ></ion-input>
       </ion-item>
       <ion-button 
@@ -21,12 +21,43 @@
     </ion-button> 
     </div>
     <div>
-      <ion-card>
-        <ion-label>Example item</ion-label>
-        <ion-icon name="checkmark-circle-outline"></ion-icon>
-        <ion-icon name="trash-outline"></ion-icon>
-      </ion-card>
+      <ion-item class="ion-margin done">
+        <ion-label>Eat fresh food</ion-label>
+        <ion-icon class="check-task" name="checkmark-circle-outline"></ion-icon>
+        <ion-icon class="delete-task" name="trash-outline"></ion-icon>
+      </ion-item>
+      <ion-item class="undone">
+        <ion-label>Go to the toilet</ion-label>
+        <ion-icon class="check-task" name="checkmark-circle-outline"></ion-icon>
+        <ion-icon class="delete-task" name="trash-outline"></ion-icon>
+      </ion-item>
+      <ion-item class="undone">
+        <ion-label>Go to the toilet</ion-label>
+        <ion-icon class="check-task" name="checkmark-circle-outline"></ion-icon>
+        <ion-icon class="delete-task" name="trash-outline"></ion-icon>
+      </ion-item>
+      <ion-item class="undone">
+        <ion-label>Go to the toilet</ion-label>
+        <ion-icon class="check-task" name="checkmark-circle-outline"></ion-icon>
+        <ion-icon class="delete-task" name="trash-outline"></ion-icon>
+      </ion-item>
+      <ion-item class="undone">
+        <ion-label>Go to the toilet</ion-label>
+        <ion-icon class="check-task" name="checkmark-circle-outline"></ion-icon>
+        <ion-icon class="delete-task" name="trash-outline"></ion-icon>
+      </ion-item>
+      <ion-item class="undone">
+        <ion-label>Go to the toilet</ion-label>
+        <ion-icon class="check-task" name="checkmark-circle-outline"></ion-icon>
+        <ion-icon class="delete-task" name="trash-outline"></ion-icon>
+      </ion-item>
     </div>
-
+      <ion-item class="task-filter">
+        <ion-select aria-label="tasks" interface="popover" placeholder="Filter tasks">
+          <ion-select-option value="all">All tasks</ion-select-option>
+          <ion-select-option value="done">Done tasks</ion-select-option>
+          <ion-select-option value="undone">Undone tasks</ion-select-option>
+        </ion-select>
+      </ion-item>
   </div>
 </ion-content>

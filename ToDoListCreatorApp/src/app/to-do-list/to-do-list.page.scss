@@ -2,7 +2,7 @@
     text-align: center;
 }
 
-ion-icon {
+.chevron {
     font-size: 30px;
     position: absolute;
     left: 15px;
@@ -20,9 +20,9 @@ h1 {
     margin-top: 80px;
 }
 
-ion-item {
+.todo-input {
     margin: 20px;
-    border-radius: 14px;
+    border-radius: 10px;
     --inner-border-width: 0px;
 }
 
@@ -30,10 +30,36 @@ ion-button {
     margin: 20px;
 }
 
-ion-card {
-    margin: 20px;
-    padding: 10px;
+
+.check-task {
+    padding-right: 10px;
 }
 
+.undone, .done {
+    margin: 16px;
+    border-radius: 10px;
+}
 
+.done {
+    opacity: 0.5;
+}
 
+.task-filter {
+    --background: rgba(112,112,112, 0.3)
+    
+}
+
+ion-select {
+    --placeholder-color: #222222;
+    --placeholder-opacity: 1;
+}
+
+ion-select::part(icon) {
+    color: #222222;
+    opacity: 0.8;
+  }
+
+  ion-select::part(placeholder){
+    font-size: 20px;
+    font-weight: 500;
+  }
