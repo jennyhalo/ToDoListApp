@@ -1,0 +1,30 @@
+ion-button {
+  margin: 20px;
+}
+.list-input {
+  margin: 20px;
+  border-radius: 10px;
+  --inner-border-width: 0px;
+}
+.noListsText {
+    text-align: center;
+}
+.header {
+    display: flex;
+    margin-bottom: 5px;
+}
+.headerLeft,
+.headerRight {
+  flex: 1;
+}
+.headerRight {
+    position: relative;
+ }
+.headerCenter {
+    margin-top: 50px;
+}
+.profile {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }

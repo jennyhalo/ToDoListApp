@@ -1,13 +1,23 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>main-view</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">main-view</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="header">
+    <div class="headerLeft"></div>
+    <div class="headerCenter">
+      <h1 class="title">My Lists</h1>
+    </div>
+    <div class="headerRight">
+      <ion-avatar class="profile" [routerLink]="['/profile']">
+        <img 
+          alt="Silhouette of a person's head"
+          src="../../assets/img/Avatar2.png" 
+        />
+      </ion-avatar>
+    </div>
+  </div>
+  <ion-item class="list-input">
+    <ion-input placeholder="Write your list name...." ></ion-input>
+  </ion-item>
+  <ion-button expand="block">Add List</ion-button>
+  <div class="ion-margin">
+    <h1 class="noListsText">Add your first list to get started!</h1>
+  </div>
 </ion-content>
