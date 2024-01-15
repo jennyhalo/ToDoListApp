@@ -3,11 +3,13 @@
     <div class="content">
       <h1>To-Do List Creator</h1>
     </div>
-    <form [formGroup]="loginForm" class="ion-margin">
+
+
+    <form [formGroup]="loginForm" novalidate class="ion-margin">
       <div>
         <h2>Login to your account</h2>
         <ion-item>
-          <ion-input label="Email" label-placement="floating">
+          <ion-input formControlName="email" label="Email" label-placement="floating">
           </ion-input>
         </ion-item>
         <!-- Controls for email  -->
@@ -20,7 +22,7 @@
           </ion-text>
         </div>
         <ion-item>
-          <ion-input label="Password" label-placement="floating">
+          <ion-input formControlName="password" label="Password" label-placement="floating">
           </ion-input>
         </ion-item>
         <!-- Controls for password  -->
@@ -35,14 +37,14 @@
         </div>
       </div>
       <div>
-        <ion-button expand="block">Login</ion-button>
+        <ion-button (click)="login()" expand="block">Login</ion-button>
       </div>
     </form>
-      <div>
-        <p>Not registered yet?</p>
-        <ion-button class="register-btn" [routerLink]="['/register']" color="secondary" expand="block">
-          Register
-        </ion-button>
-      </div>
+    <div>
+      <p>Not registered yet?</p>
+      <ion-button class="register-btn" [routerLink]="['/register']" color="secondary" expand="block">
+        Register
+      </ion-button>
+    </div>
   </div>
 </ion-content>
