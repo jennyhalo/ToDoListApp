@@ -48,7 +48,7 @@ export class ToDoListPage implements OnInit {
     this.todos.push({
       content: this.todoInput,
       completed: false,
-      icon: 'circle-outline'
+      icon: 'ellipse-outline'
     });
 
     this.todoInput = "";
