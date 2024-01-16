@@ -21,34 +21,9 @@
     </ion-button> 
     </div>
     <div>
-      <ion-item class="ion-margin done">
-        <ion-label>Eat fresh food</ion-label>
-        <ion-icon class="check-task" name="checkmark-circle-outline"></ion-icon>
-        <ion-icon class="delete-task" name="trash-outline"></ion-icon>
-      </ion-item>
-      <ion-item class="undone">
-        <ion-label>Go to the toilet</ion-label>
-        <ion-icon class="check-task" name="checkmark-circle-outline"></ion-icon>
-        <ion-icon class="delete-task" name="trash-outline"></ion-icon>
-      </ion-item>
-      <ion-item class="undone">
-        <ion-label>Go to the toilet</ion-label>
-        <ion-icon class="check-task" name="checkmark-circle-outline"></ion-icon>
-        <ion-icon class="delete-task" name="trash-outline"></ion-icon>
-      </ion-item>
-      <ion-item class="undone">
-        <ion-label>Go to the toilet</ion-label>
-        <ion-icon class="check-task" name="checkmark-circle-outline"></ion-icon>
-        <ion-icon class="delete-task" name="trash-outline"></ion-icon>
-      </ion-item>
-      <ion-item class="undone">
-        <ion-label>Go to the toilet</ion-label>
-        <ion-icon class="check-task" name="checkmark-circle-outline"></ion-icon>
-        <ion-icon class="delete-task" name="trash-outline"></ion-icon>
-      </ion-item>
-      <ion-item class="undone">
-        <ion-label>Go to the toilet</ion-label>
-        <ion-icon class="check-task" name="checkmark-circle-outline"></ion-icon>
+      <ion-item *ngFor="let todo of todos; let i = index;" lines="none" class="todo {{ (todo.completed ? 'done' : 'undone') }}">
+        <ion-icon (click)="toggleDone(i)" class="check-task" name="checkmark-circle-outline"></ion-icon>
+        <ion-label>{{ todo.content }}</ion-label>
         <ion-icon class="delete-task" name="trash-outline"></ion-icon>
       </ion-item>
     </div>
