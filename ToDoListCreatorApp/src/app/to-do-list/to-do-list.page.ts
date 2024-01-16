@@ -25,7 +25,7 @@ export class ToDoListPage implements OnInit {
         icon: 'ellipse-outline'
       },
       {
-        content: 'Go to the toilet',
+        content: 'Go to sleep',
         completed: false,
         icon: 'ellipse-outline'
       },
