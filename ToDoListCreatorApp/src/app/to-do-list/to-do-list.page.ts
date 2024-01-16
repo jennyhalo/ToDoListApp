@@ -26,12 +26,16 @@ export class ToDoListPage implements OnInit {
     ]
   }
 
-  toggleDone (id) {
-    this.todos.map((value, index) => {
-      if (index == id) value.completed = !value.completed;
+  toggleDone (id:number) {
+    this.todos.map((value, i) => {
+      if (i == id) value.completed = !value.completed;
       
       return value;
     })
+  }
+
+  deleteTodo (id:number) {
+    this.todos = this.todos.filter((value, i) => i !== id);
   }
 
 }
