@@ -25,7 +25,7 @@
     </div>
     <div>
       <ion-item *ngFor="let todo of todos; let i = index;" lines="none" class="todo {{ (todo.completed ? 'done' : 'undone') }}">
-        <ion-icon (click)="toggleDone(i)" class="check-task" name="checkmark-circle-outline"></ion-icon>
+        <ion-icon (click)="toggleDone(i)" class="check-task" [name]="todo.icon"></ion-icon>
         <ion-label>{{ todo.content }}</ion-label>
         <ion-icon (click)="deleteTodo(i)" class="delete-task" name="trash-outline"></ion-icon>
       </ion-item>

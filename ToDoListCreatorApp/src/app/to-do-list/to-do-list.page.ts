@@ -12,6 +12,8 @@ export class ToDoListPage implements OnInit {
 
  todoInput: string = "";
 
+ iconName: string = 'ellipse-outline';
+
   constructor() { }
 
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
@@ -19,11 +21,13 @@ export class ToDoListPage implements OnInit {
     this.todos = [
       {
         content: 'Eat Fresh food',
-        completed: false
+        completed: false,
+        icon: 'ellipse-outline'
       },
       {
         content: 'Go to the toilet',
-        completed: false
+        completed: false,
+        icon: 'ellipse-outline'
       },
     ]
   }
@@ -31,7 +35,7 @@ export class ToDoListPage implements OnInit {
   toggleDone (id:number) {
     this.todos.map((value, i) => {
       if (i == id) value.completed = !value.completed;
-      
+      value.icon = value.completed ? 'checkmark-circle-outline' : 'ellipse-outline';
       return value;
     })
   }
@@ -43,7 +47,8 @@ export class ToDoListPage implements OnInit {
   addTodo () {
     this.todos.push({
       content: this.todoInput,
-      completed: false
+      completed: false,
+      icon: 'circle-outline'
     });
 
     this.todoInput = "";
