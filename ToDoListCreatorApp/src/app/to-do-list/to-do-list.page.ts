@@ -10,6 +10,8 @@ export class ToDoListPage implements OnInit {
 
  todos: Todo[];
 
+ todoInput: string = "";
+
   constructor() { }
 
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
@@ -36,6 +38,15 @@ export class ToDoListPage implements OnInit {
 
   deleteTodo (id:number) {
     this.todos = this.todos.filter((value, i) => i !== id);
+  }
+
+  addTodo () {
+    this.todos.push({
+      content: this.todoInput,
+      completed: false
+    });
+
+    this.todoInput = "";
   }
 
 }

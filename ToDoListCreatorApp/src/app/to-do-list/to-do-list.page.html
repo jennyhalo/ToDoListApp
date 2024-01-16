@@ -11,14 +11,17 @@
     </div>
     <div>
       <h1>List Name</h1>
-      <ion-item class="todo-input">
-        <ion-input placeholder="There’s so many things to do...." ></ion-input>
-      </ion-item>
-      <ion-button 
-        color="primary" 
-        expand="block">
-        Add Task
-    </ion-button> 
+      <form (submit)="addTodo()">
+        <ion-item class="todo-input">
+          <ion-input type="text" name="todoInput" [(ngModel)]="todoInput" placeholder="There’s so many things to do...." ></ion-input>
+        </ion-item>
+        <ion-button 
+          color="primary" 
+          expand="block"
+          type="submit"
+          >Add Task
+      </ion-button> 
+    </form>
     </div>
     <div>
       <ion-item *ngFor="let todo of todos; let i = index;" lines="none" class="todo {{ (todo.completed ? 'done' : 'undone') }}">
